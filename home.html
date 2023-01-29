@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&family=Sofia+Sans:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+<body>
+
+<div class="background-image-nav-hero">
+    
+    <nav class="navbar">
+        <div class="nav-logo">
+          <a href="index.html"><img src="images/logoWhite.png" class="logo"></a>
+        </div>
+        <a href="#" id="hamburger-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div id="navbar-links">
+          <ul>
+            <li><a href="Books.html">About</a></li>
+            <li><a href="About.html">Books</a></li>
+            <li><a href="About.html">Reviews</a></li>
+            <li><a href="About.html">Contact</a></li>
+          </ul>
+        </div>
+        <button class="button-signUp" ><a href="SignUp.html">Sign Up</a></button>
+    </nav>
+
+
+        <div class="hero-section">
+
+            <div class="hero-left">
+                    <h1>The Maude Rogers Crime Novels</h1>
+                    <p>Catchy description of Maude Rogers and the shenanigans she gets into. Catchy descriptiong
+                        of her being a great detective.
+                    </p>
+                    <button class="purchase-button">Purchase on Amazon →</button>
+            </div>
+            <div class="hero-right">
+                <div class="hero-book-img-container" >
+                    <img class="hero-book-img" src="images/book1.png">
+                </div>
+            </div>
+            
+        </div>
+   
+
+
+
+
+
+
+
+      
+<div class="about-linda-section">
+    <div class="about-title-container">
+        <h1 class="about-linda-title">About the Author</h1>
+        <div class="line-break"></div> 
+    </div>
+    <div class="about-img-bio-container">
+        <img class="linda-pic" src="images/linda.png">
+        <div class="about-linda-bio">
+            <p class="bio-name">Linda Dunlap</p>
+            <p class="bio-location">Austin, TX</p>
+            <p class="bio-par">The entire state of Texas has been her home for all these years. 
+                Linda had several careers, always in the people business. The last one was 
+                in county law enforcement, working with jail populations. The background for her 
+                books is pulled from a rich exposure to life’s good and bad characters, some in 
+                questionable settings. Noisy, humorous, and interesting, they march through her books, 
+                each one touched with the grace of time, leaving a memory or two for readers. </p>
+    
+                    <!-- <div class="line-break"></div>
+
+                <p class="bio-par">Linda writes because she loves the chase across pages, when the bad guy finally 
+                gets caught, and brought to justice. If you have read her books, you know that 
+                sometimes she puts a little twist toward the ending. The Maude Rogers Crime Novels 
+                series is about an older female Homicide Detective whose personality is rough, 
+                to say the least, but her work is beyond reproach.</p> -->
+        </div>
+    </div>
+</div>
+
+
+<div class="reviews-container">
+    <div class="slideshow-container">
+        <h2 class="reviews-title">Reviews</h2>
+        <div class="line-break"></div> 
+        <h4 class="sub-header"><span style="color: white">What readers are saying</span></h4>
+        
+
+    <div class="mySlides fade">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <p class="reviews-text">
+            This is the best book I have ever read. The characters are extremely well written 
+            and the plot has is thrilling and exciting. I did not want to put this book down. 
+            <br><span class="red">- Martha</span>
+        </p>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="mySlides fade">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <p class="reviews-text">
+            I loved reading another crime novel from Linda Dunlap. Maude is such an interesting
+            character. I can't wait to read the next one in the Maude series. <br><span class="red">- Josh</span>
+        </p>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="mySlides fade">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <p class="reviews-text">
+            A real page-turner. I read this book in just one sitting. The characters were
+            so captivating and the mystery kept me wanting to know what was going to 
+            happen next. <br><span class="red">- Claire</span>
+        </p>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    </div>
+</div>
+
+
+
+<div class="books-section">
+    <h2 class="books-section-title">Books</h2>
+    <div class="line-break"></div>
+    <h4 class="sub-header">View all books by Linda</h4>
+    <div class="books-section-booksImg">
+        <img class="book-img" src="images/book2.png">
+        <img class="book-img" src="images/book3.png">
+        <img class="book-img" src="images/book4.png">
+    </div>
+    <button class="view-more-btn">View More</button>
+</div>
+
+
+<div class="newsletter-signup-section">
+    <div class="newsletter-images">
+        <img class="collection-img" src="images/collection.png">
+    </div>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <h2 class="newsletter-title">Join Us</h2>
+        <div class="line-break-1" ></div>
+        <h4 class="sub-header-1"><span style="color: white">Join my Newsletter</span></h4>
+
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+    
+        <input type="text" name="name" required placeholder="Name">
+        <input type="email" name="email" required placeholder="Email">
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+    
+        <button class="form-button" type="submit">Subscribe Now</button>
+    
+    </form>
+</div>
+
+
+
+
+
+    <footer class="footer-section">
+       
+        <div class="footer-info">
+            <img src="images/logoWhite.png" class="logo-footer">
+            <p>sharpewebdesigns@gmail.com</p>
+            <p>555-555-555</p>
+        </div>
+        <div class="footer-navigation-section">
+            <h1>Navigation</h1>
+            <a href="index.html"><h4>Home</h4></a>
+            <a href="about.html"><h4>About</h4></a>
+            <a href="portfolio.html"><h4>Books</h4></a>
+            <a href="contact.html"><h4>Contact</h4></a>
+        </div>
+        <div class="footer-services-section">
+            <h1>Services</h1>
+            <h4>Web Design</h4>
+            <h4>Website Maintenance</h4>
+            <h4>SEO Services</h4>
+            <h4>Content Creation</h4>
+        </div>
+    </footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
