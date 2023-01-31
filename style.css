@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(51, 39, 161, 0.5), rgba(56, 42, 127, 0.5)), url("/Users/brentsharpe/repos/LindaDunlap/images/alley.png");
+    background-image: linear-gradient(rgba(51, 39, 161, 0.5), rgba(56, 42, 127, 0.5)), url("images/alley.png");
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -471,6 +471,7 @@ path {
 
 .books-section-booksImg {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 50px;
   justify-content: center;
   gap: 100px;
@@ -479,6 +480,22 @@ path {
 .book-img {
   width: 250px;
 }
+
+.book-img:hover {
+  top:-50px; 
+  left:-35px; 
+  display:block; 
+  z-index:999; 
+  cursor: pointer; 
+  -webkit-transition-property: all; 
+  -webkit-transition-duration: 0.3s; 
+  -webkit-transition-timing-function: ease; 
+}
+  
+  /*change the number below to scale to the appropriate size*/ 
+  .book-img:hover { 
+  transform: scale(1.15); 
+  }
 
 .books-section-title {
   text-align: center;
