@@ -32,6 +32,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center;
     gap: 25px;
   }
 
@@ -54,19 +55,17 @@ body {
   }
 
   .button-signUp {
+    font-size: 1.15rem;
     background-color: #ED1703;
-    padding: 15px 25px 15px 25px;
     color: white;
-    font-size: 1.25rem;
+    border: 0;
+    padding: 15px 25px 15px 25px;
+    border-radius: 35px;
   }
 
   .button-signUp a {
     text-decoration: none;
     color: white;
-  }
-
-  .button-signUp:hover {
-    background-color: #7f0e04;
   }
   
   #hamburger-button {
@@ -86,8 +85,15 @@ body {
     background-color: white;
     border-radius: 10px;
   }
+
+  @media(max-width:1400px) {
+    .navbar {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
   
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     #hamburger-button {
       display: flex;
       margin: auto;
@@ -132,23 +138,24 @@ body {
   /*  >>>>>>>>>>>>>>>>> Hero Section  <<<<<<<<<<<<<<<<<<<  */
 
   .hero-section {
-    display: flex;
-    justify-content: space-between;
-    /* flex-wrap: wrap; */
-    width: 100%;
-    height: 90vh;
     font-family: 'Raleway', sans-serif;
-    padding-right: 150px;
     padding-left: 150px;
-    margin-top: 50px;
-    gap: 100px;
+    padding-right: 150px;
+  }
+
+  .hero-slideshow-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
   }
   
   .hero-left {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
-    width: 1000px;
+    /* margin-top: 100px; */
+    width: 700px;
+    margin-top: 75px;
     color: white;
     gap: 25px;
   }
@@ -166,19 +173,22 @@ body {
 
   .hero-book-img-container {
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    justify-content: flex-end;
+    width: 360px;
+    margin-bottom: 50px;
   }
 
   .hero-book-img {
-    width: 300px;
-    /* border-radius: 0px 35px 35px 0px;
-    box-shadow: -20px 20px rgba(89, 88, 88, 0.6); */
+    width: 350px;
   }
 
   .purchase-button {
     font-size: 1.25rem;
-    width: 300px;
+    background-color: #ED1703;
+    color: white;
+    border: 0;
+    padding: 15px 25px 15px 25px;
+    border-radius: 35px;
   }
 
   .line-break {
@@ -190,33 +200,53 @@ body {
     margin-bottom: 15px;
   }
   
-  button {
-    font-size: 1.5rem;
-    background-color: #ED1703;
-    color: white;
-    border: 0;
-    padding: 15px 25px 15px 25px;
-    border-radius: 35px;
-  }
-  
   button:hover {
     cursor: pointer;
-  }
-  
-  .hero-right {
-    justify-content: center;
-    align-items: center;
-    width: 50rem;
-  }
-
-  .book-image {
-    width: 150px;
-    height: auto;
-    border-radius: 25px;
   }
 
   .yellow {
     color: goldenrod;
+  }
+
+  @media (max-width:1400px) {
+    .hero-section {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+
+  @media (max-width:1130px) {
+
+    .hero-book-img {
+      width: 275px;
+    }
+
+    .hero-slideshow-wrapper {
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* .hero-right {
+      width: 20rem;
+    } */
+
+    .hero-section {
+      padding-left: 15px;
+    }
+  }
+
+  @media (max-width:600px) {
+    .hero-slideshow-wrapper p {
+      width: 400px;
+    }
+    .hero-left h1 {
+      font-size: 3rem;
+    }
+
+    .hero-left p {
+      font-size: 1rem;
+      width: 300px;
+    }
   }
   
 /* >>>>>>>> About Linda  <<<<<<<<< */
@@ -224,6 +254,8 @@ body {
 .about-linda-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: whitesmoke;
   /* background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/Users/brentsharpe/repos/LindaDunlap/images/logo-background.png");
@@ -235,8 +267,6 @@ body {
 
 .about-img-bio-container {
   display: grid;
-  margin-left: 150px;
-  margin-right: 150px;
   align-items: center;
   grid-template-columns: repeat(30, 1fr);
   padding-top: 50px;
@@ -258,7 +288,7 @@ body {
   width: 40rem;
   border-radius: 15px;
   height: auto;
-  grid-column: 1 / 15;
+  grid-column: 5 / 15;
 }
 
 .about-linda-bio {
@@ -292,9 +322,45 @@ body {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/* .about-title-container {
-  padding-bottom: 50px;
-} */
+@media(max-width: 1300px) {
+  .about-img-bio-container {
+    margin-left: 25px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .linda-pic {
+    width: 30rem;
+  }
+
+  .about-linda-bio {
+    width: 30rem;
+  }
+}
+
+@media(max-width: 900px) {
+  .about-img-bio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  .about-img-bio-container {
+    margin-left: 0px;
+  }
+}
+
+@media(max-width: 600px) {
+.linda-pic {
+  width: 20rem;
+}
+
+.about-linda-bio {
+  width: 20rem;
+}
+}
 
 
 
@@ -310,6 +376,13 @@ body {
     align-items: center;
     margin-top: 0;
     padding-bottom: 50px;
+}
+
+.footer-navigation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .footer-section h4 {
@@ -354,7 +427,7 @@ path {
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
-  padding: 50px;
+  /* padding: 50px; */
 
   /* display: flex; */
 }
@@ -455,6 +528,21 @@ path {
 
 .red {
   font-size: 1.75rem;
+  color: #ED1703;
+}
+
+@media(max-width: 700px) {
+  .reviews-text {
+    font-size: 1rem;
+  }
+
+  .mySlides {
+    gap: 25px;
+  }
+
+  .red {
+    font-size: 1.1rem;
+  }
 }
 
 
@@ -492,7 +580,7 @@ path {
   -webkit-transition-timing-function: ease; 
 }
   
-  /*change the number below to scale to the appropriate size*/ 
+  
   .book-img:hover { 
   transform: scale(1.15); 
   }
@@ -520,15 +608,18 @@ path {
 
 .newsletter-signup-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 150px;
+  padding: 10px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-bottom: 50px;
 }
 
 input {
@@ -540,6 +631,16 @@ input {
 
 .collection-img {
   width: 500px;
+}
+
+@media(max-width:600px) {
+  .collection-img {
+    width: 250px;
+  }
+
+  input {
+    width: 350px;
+  }
 }
 
 .line-break-1 {
@@ -562,5 +663,25 @@ input {
 .form-button {
   font-size: 20px;
   width: 200px;
-  padding: 10px;
+  font-size: 1.15rem;
+    background-color: #ED1703;
+    color: white;
+    border: 0;
+    padding: 15px 25px 15px 25px;
+    border-radius: 35px;
 }
+
+@media(max-width: 1200px) {
+  .newsletter-signup-section {
+    gap: 25px;
+  }
+}
+
+@media(max-width: 1050px) {
+  .newsletter-signup-section {
+    gap: 25px;
+  }
+}
+
+
+/*  >>>>>>>>>>>>>>>>>>>>> About Page <<<<<<<<<<<<<<<<<<<<<<<<<<  */

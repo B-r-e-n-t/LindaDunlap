@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<div class="background-image-nav-hero">
+<!-- <div class="background-image-nav-hero"> -->
     
     <nav class="navbar">
         <div class="nav-logo">
@@ -29,28 +29,32 @@
             <li><a href="about.html">About</a></li>
             <li><a href="books.html">Books</a></li>
             <li><a href="#reviews">Reviews</a></li>
+            <li><button class="button-signUp" ><a href="#signUp">Sign Up</a></button></li>
           </ul>
         </div>
-        <button class="button-signUp" ><a href="#signUp">Sign Up</a></button>
     </nav>
 
 
-        <div class="hero-section">
-
-            <div class="hero-left">
-                    <h1>The Maude Rogers Crime Novels</h1>
-                    <p>Catchy description of Maude Rogers and the shenanigans she gets into. Catchy descriptiong
-                        of her being a great detective.
-                    </p>
-                    <button class="purchase-button">Purchase on Amazon →</button>
-            </div>
-            <div class="hero-right">
-                <div class="hero-book-img-container" >
-                    <img class="hero-book-img" src="images/book1.png">
+        <section class="hero-section">
+            <div class="hero-slideshow-wrapper">
+                <div class="hero-left">
+                        <h1>The Maude Rogers Crime Novels</h1>
+                        <p>Catchy description of Maude Rogers and the shenanigans she gets into. Catchy descriptiong
+                            of her being a great detective.
+                        </p>
+                        <a href="https://www.amazon.com/stores/Linda-L.-Dunlap/author/B00I0A7VX6?ref=ap_rdr&store_ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true" target="_blank">
+                            <button class="purchase-button">Purchase on Amazon →</button>
+                        </a>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-book-img-container" >
+                        <a href="https://www.amazon.com/Maude-Rogers-Murder-Collection-Novels-ebook/dp/B0775FBZBN?ref_=ast_author_dp" target="_blank">
+                            <img class="hero-book-img" src="images/maudeCollection.png">
+                        </a>
+                    </div>
                 </div>
             </div>
-            
-        </div>
+        </section>
    
 
 
@@ -144,7 +148,7 @@
 
 <div class="newsletter-signup-section" id="signUp">
     <div class="newsletter-images">
-        <img class="collection-img" src="images/collection.png">
+        <img class="collection-img" src="images/nlBooks.png">
     </div>
     <form action="https://api.web3forms.com/submit" method="POST">
         <h2 class="newsletter-title">Join Us</h2>
@@ -167,25 +171,11 @@
 
 
     <footer class="footer-section">
-       
-        <div class="footer-info">
-            <img src="images/logoWhite.png" class="logo-footer">
-            <p>sharpewebdesigns@gmail.com</p>
-            <p>555-555-555</p>
-        </div>
         <div class="footer-navigation-section">
-            <h1>Navigation</h1>
             <a href="index.html"><h4>Home</h4></a>
             <a href="about.html"><h4>About</h4></a>
-            <a href="portfolio.html"><h4>Books</h4></a>
-            <a href="contact.html"><h4>Contact</h4></a>
-        </div>
-        <div class="footer-services-section">
-            <h1>Services</h1>
-            <h4>Web Design</h4>
-            <h4>Website Maintenance</h4>
-            <h4>SEO Services</h4>
-            <h4>Content Creation</h4>
+            <a href="books.html"><h4>Books</h4></a>
+            <a href="#reviews"><h4>Reviews</h4></a>
         </div>
     </footer>
 
