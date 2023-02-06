@@ -370,12 +370,10 @@ body {
 .footer-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     background-color: #ED1703;
     color: white;
-    align-items: center;
-    margin-top: 0;
-    padding-bottom: 50px;
 }
 
 .footer-navigation-section {
@@ -383,6 +381,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 50px;
+  padding: 25px
 }
 
 .footer-section h4 {
