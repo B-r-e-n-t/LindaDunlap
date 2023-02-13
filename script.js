@@ -25,7 +25,7 @@ function showHeroSlides() {
   }
   heroSlides[slidePosition-1].style.display = "flex";  
   heroDots[slidePosition-1].className += " active";
-  setTimeout(showHeroSlides, 2000);
+  setTimeout(showHeroSlides, 3500);
 }
 
 
