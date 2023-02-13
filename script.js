@@ -9,7 +9,11 @@ hamburgerButton.addEventListener('click', () => {
 
 
 let slidePosition = 0;
-showHeroSlides();
+showHeroSlides(slidePosition);
+
+// function currentSlide(n) {
+//   showSlides(slidePosition = n);
+// }
 
 function showHeroSlides() {
   let i;
@@ -25,7 +29,7 @@ function showHeroSlides() {
   }
   heroSlides[slidePosition-1].style.display = "flex";  
   heroDots[slidePosition-1].className += " active";
-  setTimeout(showHeroSlides, 3500);
+  setTimeout(showHeroSlides, 4000);
 }
 
 
