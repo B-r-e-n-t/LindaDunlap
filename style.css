@@ -752,10 +752,14 @@ input {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin-top: 50px;
   margin-bottom: 100px;
   gap: 50px;
   font-size: 2rem;
+  padding-left: 25px;
+  padding-right: 25px;
+
 }
 
 .booksPage-mini-nav-links {
