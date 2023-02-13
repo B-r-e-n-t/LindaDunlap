@@ -132,6 +132,7 @@ body {
   
     .logo {
       margin-top: 15px;
+      width: 75;
     }
   } 
   
@@ -142,10 +143,27 @@ body {
     padding-left: 150px;
     padding-right: 150px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100vw;
+    min-height: 600px;
   }
+
+  .active {
+    background-color: #717171;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+
   
   .hero-left {
     display: flex;
@@ -171,12 +189,18 @@ body {
   .hero-book-img-container {
     display: flex;
     justify-content: flex-end;
-    width: 360px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+    margin-left: 15px;
   }
 
   .hero-book-img {
     width: 350px;
+  }
+
+  .hero-book-img-bridges {
+    width: 450px;
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 
   .purchase-button {
@@ -186,6 +210,10 @@ body {
     border: 0;
     padding: 15px 25px 15px 25px;
     border-radius: 35px;
+  }
+
+  .hero-right {
+    width: 400px;
   }
 
   .line-break {
@@ -239,6 +267,10 @@ body {
 
     .hero-book-img-container {
       justify-content: center;
+    }
+
+    .hero-book-img-bridges {
+      width: 350px;
     }
   }
   
@@ -470,7 +502,7 @@ path {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  color: #ED1703;
 }
 
 /* Caption text */
@@ -592,6 +624,12 @@ path {
 
 .view-more-btn {
   margin-top: 50px;
+  font-size: 1.25rem;
+  background-color: #ED1703;
+  color: white;
+  border: 0;
+  padding: 15px 25px 15px 25px;
+  border-radius: 35px;
 }
 
 
@@ -676,4 +714,27 @@ input {
 }
 
 
-/*  >>>>>>>>>>>>>>>>>>>>> About Page <<<<<<<<<<<<<<<<<<<<<<<<<<  */
+/*  >>>>>>>>>>>>>>>>>>>>> Books Page <<<<<<<<<<<<<<<<<<<<<<<<<<  */
+
+.book-collections {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.books-section-booksPage h2 {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.line-break-booksPage {
+  height: 2px;
+  width: 100%;
+  margin-top: 150px;
+  border: #ED1703 solid 1px;
+
+}
