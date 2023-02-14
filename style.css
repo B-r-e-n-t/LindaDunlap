@@ -251,9 +251,9 @@ body {
 
   @media (max-width:1130px) {
 
-    .hero-book-img {
+    /* .hero-book-img {
       width: 275px;
-    }
+    } */
 
     .hero-slide-wrapper {
       justify-content: center;
@@ -273,6 +273,10 @@ body {
       font-size: 1rem;
       width: 300px;
     }
+
+    .hero-book-img {
+      width: 275px;
+    } 
 
     .hero-book-img-container {
       justify-content: center;
@@ -756,7 +760,7 @@ input {
   margin-top: 50px;
   margin-bottom: 100px;
   gap: 50px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding-left: 25px;
   padding-right: 25px;
 
