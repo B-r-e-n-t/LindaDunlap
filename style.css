@@ -440,16 +440,16 @@ body {
 
 .books-series-section {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-around;
   margin-top: 50px;
   padding-bottom: 50px;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 
-.books-series-section-series {
+/* .books-series-section-series {
   gap: 45px;
-}
+} */
 
 .books-series-img {
   width: 250px;
@@ -457,7 +457,7 @@ body {
 }
 
 .books-series-section-bookTitle {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 
 
@@ -471,13 +471,19 @@ body {
   }
 
   .books-series-section-container {
-    padding: 10px;
+    /* padding: 10px; */
   }
 }
 
 @media(max-width:600px) {
-  .books-series-section-left {
-    width: 400px;
+  .books-series-section {
+    /* width: 400px; */
+    padding: 10px;
+    margin: 0;
+  }
+
+  .books-series-section-description {
+    width: 300px;
   }
 }
 
@@ -612,6 +618,10 @@ body {
 
   .red {
     font-size: 1.1rem;
+  }
+
+  .reviews-container {
+    padding: 10px;
   }
 }
 
