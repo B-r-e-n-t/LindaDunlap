@@ -8,29 +8,29 @@ hamburgerButton.addEventListener('click', () => {
 
 
 
-let slidePosition = 0;
-showHeroSlides(slidePosition);
+// let slidePosition = 1;
+// showHeroSlides(slidePosition);
 
-// function currentSlide(n) {
-//   showSlides(slidePosition = n);
+// function plusHeroSlides(n) {
+//   showHeroSlides(slidePosition = n);
 // }
 
-function showHeroSlides() {
-  let i;
-  let heroSlides = document.getElementsByClassName("hero-slide-wrapper");
-  let heroDots = document.getElementsByClassName("hero-dot");
-  for (i = 0; i < heroSlides.length; i++) {
-    heroSlides[i].style.display = "none";  
-  }
-  slidePosition++;
-  if (slidePosition > heroSlides.length) {slidePosition = 1}    
-  for (i = 0; i < heroDots.length; i++) {
-    heroDots[i].className = heroDots[i].className.replace(" active", "");
-  }
-  heroSlides[slidePosition-1].style.display = "flex";  
-  heroDots[slidePosition-1].className += " active";
-  setTimeout(showHeroSlides, 4000);
-}
+// function showHeroSlides() {
+//   let i;
+//   let heroSlides = document.getElementsByClassName("hero-slide-wrapper");
+//   let heroDots = document.getElementsByClassName("hero-dot");
+//   for (i = 0; i < heroSlides.length; i++) {
+//     heroSlides[i].style.display = "none";  
+//   }
+//   slidePosition++;
+//   if (slidePosition > heroSlides.length) {slidePosition = 1}    
+//   for (i = 0; i < heroDots.length; i++) {
+//     heroDots[i].className = heroDots[i].className.replace(" active", "");
+//   }
+//   heroSlides[slidePosition-1].style.display = "flex";  
+//   heroDots[slidePosition-1].className += " active";
+//   setTimeout(showHeroSlides, 5000);
+// }
 
 
 

@@ -144,13 +144,13 @@ body {
     padding-left: 150px;
     padding-right: 150px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     width: 100vw;
     min-height: 600px;
   }
 
-  .fade {
+  /* .fade {
     animation-name: fade;
     animation-duration: 1.5s;
   }
@@ -168,17 +168,17 @@ body {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
+  } */
 
-  .active {
+  /* .active {
     background-color: #ED1703;
   }
-  
+   */
   .hero-left {
     display: flex;
     flex-direction: column;
     /* margin-top: 100px; */
-    width: 700px;
+    width: 600px;
     margin-top: 75px;
     color: white;
     gap: 25px;
@@ -190,7 +190,7 @@ body {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
-  .hero-left p {
+  .hero-left h2 {
     font-size: 1.25rem;
     color: rgb(198, 196, 196);
   }
@@ -242,6 +242,35 @@ body {
     color: goldenrod;
   }
 
+  /* .prevHero, .nextHero {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  /* .nextHero {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  } */
+  
+  /* On hover, add a black background color with a little bit see-through 
+  .prevHero:hover, .nextHero:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+   */
+
+
+
   @media (max-width:1400px) {
     .hero-slide-wrapper {
       padding-left: 25px;
@@ -269,8 +298,7 @@ body {
       font-size: 3rem;
     }
 
-    .hero-left p {
-      font-size: 1rem;
+    .hero-left h2 {
       width: 300px;
     }
 
@@ -402,50 +430,55 @@ body {
 
 
 
-
- /* >>>>>>>> Footer  <<<<<<<<< */
- 
-.footer-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: #ED1703;
-    color: white;
+/*  >>>>>>>>>>>>>>>>>>>>>  Books Series Section <<<<<<<<<<<<<<<<<<<<<<<<<<<<<  */
+.books-series-section-container {
+  background-color: whitesmoke;
+  /* background: url(images/logo-background.png); */
+  width: 100%;
+  /* padding: 100px; */
 }
 
-.footer-navigation-section {
+.books-series-section {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 50px;
-  padding: 25px
+  justify-content: space-around;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
 }
 
-.footer-section h4 {
-    font-weight: lighter;
-}
-.logo-footer {
-    width: 300px;
-    height: auto;
+.books-series-section-series {
+  gap: 45px;
 }
 
-.footer-navigation-section a {
-    text-decoration: none;
-    color: white;
+.books-series-img {
+  width: 250px;
+  padding: 25px;
 }
 
-.footer-info {
-    text-align: center;
+.books-series-section-bookTitle {
+  font-size: 2.5rem;
 }
 
-.curvy-div {
-    margin: 0;
-    font-size: 0;
+
+.books-series-section-description {
+  width: 400px;
 }
 
-path {
-    margin: 0;
+@media(max-width:900px) {
+  .books-series-section {
+    gap: 50px;
+  }
+
+  .books-series-section-container {
+    padding: 10px;
+  }
+}
+
+@media(max-width:600px) {
+  .books-series-section-left {
+    width: 400px;
+  }
 }
 
 
@@ -626,7 +659,7 @@ path {
   text-align: center;
   color: #ED1703;
   font-size: 2.5rem;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 
 .sub-header {
@@ -643,6 +676,10 @@ path {
   border: 0;
   padding: 15px 25px 15px 25px;
   border-radius: 35px;
+}
+
+.booksPage-newsletter {
+  background-color: whitesmoke;
 }
 
 
@@ -779,4 +816,57 @@ input {
 .booksPage-mini-nav-links:hover {
   border-bottom: white 3px solid;
   color: #ED1703;
+}
+
+
+ /* >>>>>>>> Footer  <<<<<<<<< */
+ 
+ .footer-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #ED1703;
+  color: white;
+}
+
+.footer-navigation-section {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 50px;
+padding: 25px
+}
+
+.footer-section h4 {
+  font-weight: lighter;
+}
+.logo-footer {
+  width: 300px;
+  height: auto;
+}
+
+.footer-navigation-section a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-info {
+  text-align: center;
+}
+
+.curvy-div {
+  margin: 0;
+  font-size: 0;
+}
+
+path {
+  margin: 0;
+}
+
+.footer-subsection {
+padding: 25px 0px 25px 0px;
+text-align: center;
+/* background-color: #190061; */
+color: white;
 }
