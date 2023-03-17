@@ -286,7 +286,7 @@ body {
 
     .hero-slide-wrapper {
       justify-content: center;
-      align-items: center;
+      /* align-items: center; */
     }
   }
 
@@ -431,29 +431,54 @@ body {
 
 
 /*  >>>>>>>>>>>>>>>>>>>>>  Books Series Section <<<<<<<<<<<<<<<<<<<<<<<<<<<<<  */
-.books-series-section-container {
+/*.books-series-section-container {
   background-color: whitesmoke;
-  /* background: url(images/logo-background.png); */
   width: 100%;
-  /* padding: 100px; */
 }
 
 .books-series-section {
   display: flex;
-  /* align-items: center; */
-  justify-content: space-around;
-  margin-top: 50px;
+  justify-content: space-between;
+  margin: 0px 125px 0px 125px;
   padding-bottom: 50px;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
 }
 
-/* .books-series-section-series {
-  gap: 45px;
-} */
+.series-section-book-img-container {
+  display: flex;
+  gap: 10px;
+}
 
-.books-series-img {
-  width: 250px;
+.books-series-section-series {
+  margin-top: 50px;
   padding: 25px;
+}
+
+.series-img {
+  width: 125px;
+  height: 200px;
+  border-radius: 0px 5px 5px 0px;
+  margin-top: 25px;
+}
+
+.series-img:hover {
+  top:-50px; 
+  left:-35px; 
+  display:block; 
+  z-index:999; 
+  cursor: pointer; 
+  -webkit-transition-property: all; 
+  -webkit-transition-duration: 0.3s; 
+  -webkit-transition-timing-function: ease; 
+}
+  
+  
+  .series-img:hover { 
+  transform: scale(1.15); 
+  }
+
+.coming-soon {
+  border: 1px black solid;
 }
 
 .books-series-section-bookTitle {
@@ -463,21 +488,18 @@ body {
 
 .books-series-section-description {
   width: 400px;
+  margin-top: 25px;
 }
 
 @media(max-width:900px) {
   .books-series-section {
     gap: 50px;
   }
-
-  .books-series-section-container {
-    /* padding: 10px; */
-  }
 }
 
 @media(max-width:600px) {
   .books-series-section {
-    /* width: 400px; */
+
     padding: 10px;
     margin: 0;
   }
@@ -485,7 +507,7 @@ body {
   .books-series-section-description {
     width: 300px;
   }
-}
+} */
 
 
 
@@ -783,10 +805,17 @@ input {
   flex-wrap: wrap;
 }
 
-.books-section-booksPage h2 {
+.booksPage-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.booksPage-section h2 {
   color: white;
   font-size: 3rem;
-  text-align: center;
+  /* text-align: center; */
   margin-top: 100px;
   margin-bottom: 50px;
 }
@@ -805,13 +834,25 @@ input {
   align-items: center;
   text-align: center;
   margin-top: 50px;
-  margin-bottom: 100px;
   gap: 50px;
   font-size: 1.5rem;
   padding-left: 25px;
   padding-right: 25px;
-
 }
+
+.books-page-section-description {
+  /* margin: auto; */
+  color: white;
+  width: 40rem;
+  margin-bottom: 25px;
+}
+
+/* .books-page-title-description {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+} */
 
 .booksPage-mini-nav-links {
   text-decoration: none;
