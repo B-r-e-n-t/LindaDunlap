@@ -1,8 +1,15 @@
-const hamburgerButton = document.getElementById('hamburger-button');
-const navBarLinks = document.getElementById('navbar-links');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelectorAll('.nav__link');
 
-hamburgerButton.addEventListener('click', () => {
-    navBarLinks.classList.toggle('active')
+navToggle.addEventListener('click', () => {
+    document.body.classList.toggle('nav-open');
+});
+
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        document.body.classList.remove('nav-open')
+    })
 })
 
 

@@ -14,128 +14,182 @@ body {
     height: 100vh;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    color: white;
-    align-items: center;
-    font-family: 'Raleway', sans-serif;
-    padding-left: 150px;
-    padding-right: 150px;
-  } 
-  
-  .logo {
-    width: 125px;
-    height: auto;
-  }
-  
-  #navbar-links ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-  }
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Nav <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  */
 
-  #navbar-links  li{
-    list-style: none;
-    border-bottom: transparent solid 5px;
-  }
-  
-  #navbar-links li a {
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-    display: block;
-    font-size: 1.5rem;
-  }
-  
-  #navbar-links li:hover {
-    cursor: pointer;
-    background-color: #ED1703;
-  }
+.logo {
+  max-width: 125px;
+  margin: auto;
+}
 
-  .button-signUp {
-    font-size: 1.15rem;
-    background-color: #ED1703;
-    color: white;
-    border: 0;
-    padding: 15px 25px 15px 25px;
-    border-radius: 35px;
-  }
+.nav {
+  position: fixed;
+  background: #190061;
+  color: white;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transform: translate(100%);
+  transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
 
-  .button-signUp a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  #hamburger-button {
-    position: absolute;
-    top: 1.75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
-  }
-  
-  #hamburger-button .bar{
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-  }
+.nav__list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
 
-  @media(max-width:1400px) {
-    .navbar {
-      padding-left: 25px;
-      padding-right: 25px;
-    }
-  }
-  
-  @media (max-width: 900px) {
-    #hamburger-button {
+.nav__link {
+  color: white;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h3);
+  text-decoration: none;
+  padding-bottom: 15px;
+}
+
+.nav__link:hover {
+  cursor: pointer;
+  border-bottom: orangered 2px solid;
+}
+
+.nav-toggle {
+  padding: .5em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 2.25em;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before, 
+.hamburger::after {
+  background: white;
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+
+.hamburger::before, 
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before {
+  top: 6px;
+}
+
+.hamburger::after {
+  bottom: 6px;
+}
+
+.nav-open .nav{
+  transform: translate(0);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger,
+.nav-open .hamburger::before, 
+.nav-open .hamburger::after {
+  background: white;
+}
+
+.nav-open .hamburger {
+  transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
+@media(min-width: 1200px) {
+  .nav {
+      position: relative;
+      background-color: transparent;
+      color: var(--clr-white);
+      transform: none;
       display: flex;
-      margin: auto;
     }
-  
-    #navbar-links {
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      /* width: 100%; */
+      background-color: transparent;
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+
+    .nav__list {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      /* height: 100%; */
+      justify-content: space-around;
+      align-items: center;
+      transform: none;
+      transition: none;
+      gap: 100px;
+    }
+
+    .nav-toggle {
       display: none;
-      width: 100%;
-    }
-  
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    #navbar-links ul {
-      flex-direction: column;
-      width: 100%;
-      background-color: white;
-      /* z-index: 1; */
-      transition: 1s;
-    }
-  
-    #navbar-links li {
-      text-align: center;
-      font-size: 5rem;
     }
 
-    #navbar-links li a{
-      color: black;
+    .nav__link {
+      color: white;
+      font-weight: var(--fw-bold);
+      font-size: 1.75rem;
+      text-decoration: none;
     }
-  
-    #navbar-links.active {
-      display: flex;
-    }
-  
+
     .logo {
-      margin-top: 15px;
-      width: 75;
+      margin: 0;
     }
-  } 
+}
+
+
+
+.button-signUp {
+  font-size: 1.75rem;
+  background-color: #ED1703;
+  color: white;
+  border: 0;
+  padding: 15px 25px 15px 25px;
+  border-radius: 35px;
+}
+
+.button-signUp a {
+  text-decoration: none;
+  color: white;
+}
+
   
   /*  >>>>>>>>>>>>>>>>> Hero Section  <<<<<<<<<<<<<<<<<<<  */
 
@@ -814,7 +868,7 @@ input {
 
 .booksPage-section h2 {
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   /* text-align: center; */
   margin-top: 100px;
   margin-bottom: 50px;
@@ -867,6 +921,18 @@ input {
 .booksPage-mini-nav-links:hover {
   border-bottom: white 3px solid;
   color: #ED1703;
+}
+
+@media(max-width: 1300px) {
+  .books-page-section-description {
+    width: 30rem;
+  }
+}
+
+@media(max-width: 900px) {
+  .books-page-section-description {
+    width: 20rem;
+  }
 }
 
 
